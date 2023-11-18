@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" derfer></script>
+</head>
+
+<body>
+    <h1>Gestion de Facturation</h1>
+    <form id="invoiceForm">
+        <label for="clientSelect">Sélectionnez le client :</label>
+        <select id="clientSelect">
+
+        </select>
+        <label for="monthSelect">Mois de facturation :</label>
+        <select id="monthSelect">
+            <option value="0">Janvier</option>
+            <option value="1">Février</option>
+            <option value="2">mars</option>
+            <option value="3">avril</option>
+            <option value="4">mai</option>
+            <option value="5">juin</option>
+            <option value="6">juillet</option>
+            <option value="7">août</option>
+            <option value="8">septembre</option>
+            <option value="9">octobre</option>
+            <option value="10">novembre</option>
+            <option value="11">décembre</option>
+
+        </select>
+        <button type="button" id="generateInvoice">Générer la facture</button>
+        <button type="button" id="printInvoice">Imprimer la facture</button>
+
+    </form>
+    <div id="invoice">
+        <h1>Facture du mois de </h1>
+        <h2>La Voix du Nord</h2>
+        <div class="parent">
+            <p class="p1">
+                MME Lemire Isabelle<br>
+                27 allée des érables<br>
+                59310 Orchies<br>
+                TEL: 06/06/83/57/62</p>
+
+
+            <p class="p2">
+
+            </p>
+        </div>
+        <div class="parent1">
+
+            <li class="div1">quantité</li>
+            <li class="div2">nom</li>
+            <li class="div3">prix unitaire</li>
+            <li class="div4">sous total catégorie</li>
+
+
+
+            <input type="number" id="quantity1.6" class="quantity space div5"
+                value="${daysInMonth['dimanche'] + daysInMonth['lundi'] + daysInMonth['mardi'] + daysInMonth['mercredi'] + daysInMonth['jeudi']}"
+                min="0">
+            <label for="quantity1.6" class="space div6">PRIX VDN villeneuve d'ascq (dimanche a jeudi)</label>
+            <span class="space div7">1.6€</span>
+            <span id="sous-total-1" class="space div8">0.00€</span>
+            <input type="number" id="quantity2.1" class="quantity space div9"
+                value="${daysInMonth['vendredi'] + daysInMonth['samedi']}" min="0">
+            <label for="quantity2.1" class="space div10">PRIX VDN villeneuve d'ascq (vendredi & samedi)</label>
+            <span class="space div11">2.1€</span>
+            <span id="sous-total-2" class="space div12">0.00€</span>
+
+            <input type="number" id="vds" class="quantity space div13" value="" min="0">
+            <label for="vds" class="space div14">LA VOIX DES SPORT</label>
+            <span class="space div15">2.9€</span>
+            <span id="sous-total-3" class="space div16">0.00€</span>
+            <table class="style-table div20">
+                <tr>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td id="totalAmount"></td>
+                </tr>
+            </table>
+
+        </div>
+
+</body>
+
+</html>
